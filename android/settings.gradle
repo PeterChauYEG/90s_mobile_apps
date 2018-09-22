@@ -1,0 +1,3 @@
+rootProject.name = 'lyrics_generator'
+
+include ':app'
