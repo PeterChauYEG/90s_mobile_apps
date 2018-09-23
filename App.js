@@ -6,7 +6,7 @@
  */
 
 import React, { Component, Fragment } from 'react'
-import { Button, StyleSheet,  Text, TextInput, View,
+import { Button, Slider, StyleSheet, Text, TextInput, View,
 } from 'react-native'
 
 type Props = {}
@@ -18,7 +18,7 @@ export default class App extends Component<Props> {
       lyrics: null,
       error: null,
       isLoading: false,
-      nChars: "50",
+      nChars: 50,
       sample: 'sweet dreams are made of '
     }
   }
@@ -33,12 +33,9 @@ export default class App extends Component<Props> {
     // set loading state
     this.setState({ isLoading: true })
 
-    // convert to int
-    nCharsAsInt = parseInt(nChars)
-    
     // construct data object
     const data = { 
-      n_chars: nCharsAsInt, 
+      n_chars: nChars, 
       sample 
     }
 
@@ -96,11 +93,14 @@ export default class App extends Component<Props> {
                    value={sample}
                 />
                 <Text style={styles.body}>Enter of characters to generate</Text>
-                <TextInput onChangeText={this.onNCharsChange}
+                <Slider maximumValue={500}
+                  minimumValue={10}
+                  onValueChange={this.onNCharsChange}
+                  step={10}
                   style={styles.textInput}
-                  placeholder="10"
                   value={nChars}
                 />
+                <Text>{nChars}</Text>
                 <Button accessibilityLabel="Generate lyrics from your initial lyrics"
                   color="#841584" 
                   onPress={this.onPress}
@@ -147,7 +147,8 @@ const styles = StyleSheet.create({
     backgroundColor: '#F5FCFF'
   },
   textInput: {
-    height: 40
+    height: 40,
+    width: 100
   },
   title: {
     fontSize: 20,
