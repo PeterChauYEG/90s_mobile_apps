@@ -17,6 +17,14 @@ import { connect } from 'react-redux'
 // redux actions
 import { lyricGenerationRequest } from './actions'
 
+// components
+import ErrorOccurred from './ErrorOccurred'
+import Loading from './Loading'
+import Lyrics from './Lyrics'
+
+// styles 
+import styles from './styles/ReduxApp'
+
 type Props = {}
 class MainApp extends Component<Props> {
   constructor (props) {
@@ -56,7 +64,6 @@ class MainApp extends Component<Props> {
     })
       .then(response => response.json())
       .then(lyrics => {
-        console.log(lyrics)
         this.setState({ lyrics, isLoading: false })
       })
       .catch(error => this.setState({ isLoading: false, error }))
@@ -129,49 +136,7 @@ class MainApp extends Component<Props> {
   }
 }
 
-const ErrorOccurred = () => {
-  return <Text style={styles.title}>Uh oh, an error has occurred</Text>
-}
 
-const Loading = () => {
-  return <Text style={styles.title}>predicting...</Text>
-}
-
-const Lyrics = props => {
-  const { lyrics, sample } = props
-
-  return (
-    <Fragment>
-      <Text style={styles.body}>Initial Lyrics</Text>
-      <Text style={styles.body}>{sample}</Text>
-      <Text style={styles.body}>Generated Lyrics</Text>
-      <Text style={styles.body}>{lyrics}</Text>
-    </Fragment>
-  )
-}
-
-const styles = StyleSheet.create({
-  body: {
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5
-  },
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF'
-  },
-  textInput: {
-    height: 40,
-    width: 100
-  },
-  title: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10
-  }
-})
 
 const mapStateToProps = state => ({
   lyricGenerator: state.lyricGenerator
