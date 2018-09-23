@@ -1,45 +1,48 @@
 /**
- * Sample React Native App
- * https://github.com/facebook/react-native
+ * 90s Pop Lyrics Generator Mobile Apps
  *
  * @format
  * @flow
  */
 
-import React, {Component} from 'react';
-import {Platform, StyleSheet, Text, View} from 'react-native';
+import React, { Component, Fragment } from 'react'
+import { Button, StyleSheet,  Text, TextInput, View,
+} from 'react-native'
 
-const instructions = Platform.select({
-  ios: 'Press Cmd+R to reload,\n' + 'Cmd+D or shake for dev menu',
-  android:
-    'Double tap R on your keyboard to reload,\n' +
-    'Shake or press menu button for dev menu',
-});
-
-type Props = {};
+type Props = {}
 export default class App extends Component<Props> {
   constructor (props) {
-    super (props)
-    
+    super(props)
+
     this.state = {
-      result: null,
+      lyrics: null,
       error: null,
       isLoading: false,
-      n_chars: 50,
-      sample: "sweet dreams are made of ",
+      nChars: "50",
+      sample: 'sweet dreams are made of '
     }
   }
+
+  onNCharsChange = text => {
+    this.setState({ nChars: text })
+  }
   
-  componentDidMount () {
-    const { n_chars, sample } = this.state
-    
+  onPress = () => {
+    const { nChars, sample } = this.state
+
     // set loading state
     this.setState({ isLoading: true })
+
+    // convert to int
+    nCharsAsInt = parseInt(nChars)
     
     // construct data object
-    const data = { n_chars, sample }
-    
-    fetch('http://localhost:5000/api/model', {
+    const data = { 
+      n_chars: nCharsAsInt, 
+      sample 
+    }
+
+    fetch('http://169.254.27.221:5000/api/model', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json; charset=utf-8'
@@ -47,70 +50,108 @@ export default class App extends Component<Props> {
       body: JSON.stringify(data)
     })
       .then(response => response.json())
-      .then(result => this.setState({ result, isLoading: false }))
+      .then(lyrics => {
+        console.log(lyrics)
+        this.setState({ lyrics, isLoading: false })
+      })
       .catch(error => this.setState({ isLoading: false, error }))
-      
+  }
+
+  onSampleChange = text => {
+    this.setState({ sample: text })
   }
   
-  render() {
-    const { 
-      error, 
-      isLoading, 
-      result, 
-      sample, 
-    } = this.state
-        
+  render () {
+    const { error, isLoading, lyrics, nChars, sample } = this.state
+
     if (isLoading) {
       return (
         <View style={styles.container}>
-          <Text style={styles.title}>loading...</Text>
+          <Loading />
         </View>
-      )      
+      )
     }
-    
-    if (error) {
+
+    if (error) {      
       return (
         <View style={styles.container}>
-          <Text style={styles.title}>{error}</Text>
+          <ErrorOccurred />
         </View>
-      )      
+      )
     }
-    
+
     return (
       <View style={styles.container}>
         <Text style={styles.title}>90s Pop Lyric Generator</Text>
-        <Text style={styles.body}>Initial Lyrics</Text>
-        <Text style={styles.body}>{sample}</Text>
-        <Text style={styles.body}>Generated Lyrics</Text>
-        <Text style={styles.body}>{result}</Text>
+
+        {
+          lyrics 
+            ? <Lyrics lyrics={lyrics} sample={sample} />
+            : (
+              <Fragment>
+                <Text style={styles.body}>Enter some initial lyrics</Text>
+                 <TextInput onChangeText={this.onSampleChange}
+                   placeholder="sweet dreams are made of these"
+                   style={styles.textInput}
+                   value={sample}
+                />
+                <Text style={styles.body}>Enter of characters to generate</Text>
+                <TextInput onChangeText={this.onNCharsChange}
+                  style={styles.textInput}
+                  placeholder="10"
+                  value={nChars}
+                />
+                <Button accessibilityLabel="Generate lyrics from your initial lyrics"
+                  color="#841584" 
+                  onPress={this.onPress}
+                  title='Generate' />
+              </Fragment>
+            )
+        }
       </View>
-    );  
-    
-    return (
-      <View style={styles.container}>
-        <Text style={styles.title}>90s Pop Lyric Generator</Text>
-        <Text style={styles.body}>Enter some initial lyrics</Text>
-        <Text style={styles.body}>Enter of characters to generate</Text>
-      </View>
-    );  
+    )
   }
 }
 
+const ErrorOccurred = () => {
+  return <Text style={styles.title}>Uh oh, an error has occurred</Text>
+}
+
+const Loading = () => {
+  return <Text style={styles.title}>predicting...</Text>
+}
+
+const Lyrics = props => {
+  const { lyrics, sample } = props
+  
+  return (
+    <Fragment>
+      <Text style={styles.body}>Initial Lyrics</Text>
+      <Text style={styles.body}>{sample}</Text>
+      <Text style={styles.body}>Generated Lyrics</Text>
+      <Text style={styles.body}>{lyrics}</Text>
+    </Fragment>
+  )
+}
+
 const styles = StyleSheet.create({
+  body: {
+    textAlign: 'center',
+    color: '#333333',
+    marginBottom: 5
+  },
   container: {
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#F5FCFF',
+    backgroundColor: '#F5FCFF'
+  },
+  textInput: {
+    height: 40
   },
   title: {
     fontSize: 20,
     textAlign: 'center',
-    margin: 10,
+    margin: 10
   },
-  body: {
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5,
-  },
-});
+})
