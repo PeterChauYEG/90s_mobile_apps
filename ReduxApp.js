@@ -31,8 +31,6 @@ class MainApp extends Component<Props> {
     super(props)
 
     this.state = {
-      error: props.error,
-      isLoading: props.isLoading,
       lyrics: props.lyrics,
       nChars: 50,
       sample: 'sweet dreams are made of '
@@ -43,39 +41,14 @@ class MainApp extends Component<Props> {
     this.setState({ nChars: text })
   }
 
-  onPress = () => {
-    const { nChars, sample } = this.state
-
-    // set loading state
-    this.setState({ isLoading: true })
-
-    // construct data object
-    const data = {
-      n_chars: nChars,
-      sample
-    }
-
-    fetch('http://172.30.227.0:5000/api/model', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json; charset=utf-8'
-      },
-      body: JSON.stringify(data)
-    })
-      .then(response => response.json())
-      .then(lyrics => {
-        this.setState({ lyrics, isLoading: false })
-      })
-      .catch(error => this.setState({ isLoading: false, error }))
-  }
-
   onSampleChange = text => {
     this.setState({ sample: text })
   }
 
   render () {    
-    const { error, isLoading, lyrics, nChars, sample } = this.state
-
+    const { lyrics, nChars, sample } = this.state
+    const { error, isLoading } = this.props 
+    
     if (isLoading) {
       return (
         <View style={styles.container}>
@@ -117,12 +90,6 @@ class MainApp extends Component<Props> {
               value={nChars}
             />
             <Text>{nChars}</Text>
-            {/* <Button
-              accessibilityLabel='Generate lyrics from your initial lyrics'
-              color='#841584'
-              onPress={this.onPress}
-              title='Generate'
-            /> */}
             <Button
               accessibilityLabel='Generate lyrics from your initial lyrics'
               color='#841584'

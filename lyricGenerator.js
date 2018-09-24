@@ -15,6 +15,7 @@ const lyricGenerator = (state = initialState, action) => {
     case 'LYRIC_GENERATION_FAILURE':
       const { error } = action
       return {
+        ...state,
         error,
         isLoading: false
       }
@@ -22,10 +23,9 @@ const lyricGenerator = (state = initialState, action) => {
     // when there is a request, set loading to true, and set the params that
     // were passed in
     case 'LYRIC_GENERATION_REQUEST':
-      const { nChars, sample } = action
-      
-      console.log({nChars, sample})
+      const { nChars, sample } = action      
       return {
+        ...state,
         isLoading: true,
         nChars,
         sample
@@ -35,6 +35,7 @@ const lyricGenerator = (state = initialState, action) => {
     case 'LYRIC_GENERATION_SUCCESS':
       const { lyrics } = action
       return {
+        ...state,
         isLoading: false,
         lyrics
       }

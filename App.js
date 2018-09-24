@@ -29,7 +29,6 @@ type Props = {}
 export default class App extends Component<Props> {
   render () {
     
-    console.log(rootSaga)
     // create middleware 
     const middleware = []
     
