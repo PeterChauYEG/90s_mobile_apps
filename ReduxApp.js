@@ -6,10 +6,10 @@
  */
 
 // react
-import React, { Component, Fragment } from 'react'
+import React, { Component } from 'react'
 
 // react native
-import { Button, Slider, StyleSheet, Text, TextInput, View } from 'react-native'
+import { Text, View } from 'react-native'
 
 // redux
 import { connect } from 'react-redux'
@@ -19,6 +19,7 @@ import { lyricGenerationRequest } from './actions'
 
 // components
 import ErrorOccurred from './ErrorOccurred'
+import GenerateForm from './GenerateForm'
 import Loading from './Loading'
 import Lyrics from './Lyrics'
 
@@ -27,16 +28,6 @@ import styles from './styles/ReduxApp'
 
 type Props = {}
 class MainApp extends Component<Props> {
-  constructor (props) {
-    super(props)
-
-    this.state = {
-      lyrics: props.lyrics,
-      nChars: 50,
-      sample: 'sweet dreams are made of '
-    }
-  }
-
   onNCharsChange = text => {
     this.setState({ nChars: text })
   }
@@ -46,8 +37,8 @@ class MainApp extends Component<Props> {
   }
 
   render () {    
-    const { lyrics, nChars, sample } = this.state
-    const { error, isLoading } = this.props 
+    const { lyricGenerationRequest } = this.props
+    const { error, isLoading, lyrics, nChars, sample } = this.props.lyricGenerator 
     
     if (isLoading) {
       return (
@@ -70,40 +61,14 @@ class MainApp extends Component<Props> {
         <Text style={styles.title}>90s Pop Lyric Generator</Text>
 
         {lyrics ? (
-          <Lyrics lyrics={lyrics} sample={sample} />
+          <Lyrics lyrics={lyrics} nChars={nChars} sample={sample} />
         ) : (
-          <Fragment>
-            <Text style={styles.body}>Enter some initial lyrics</Text>
-            <TextInput
-              onChangeText={this.onSampleChange}
-              placeholder='sweet dreams are made of these'
-              style={styles.textInput}
-              value={sample}
-            />
-            <Text style={styles.body}>Enter of characters to generate</Text>
-            <Slider
-              maximumValue={500}
-              minimumValue={10}
-              onValueChange={this.onNCharsChange}
-              step={10}
-              style={styles.textInput}
-              value={nChars}
-            />
-            <Text>{nChars}</Text>
-            <Button
-              accessibilityLabel='Generate lyrics from your initial lyrics'
-              color='#841584'
-              onPress={() => this.props.lyricGenerationRequest(nChars, sample)}
-              title='Generate'
-            />            
-          </Fragment>
+          <GenerateForm lyricGenerationRequest={lyricGenerationRequest}/>
         )}
       </View>
     )
   }
 }
-
-
 
 const mapStateToProps = state => ({
   lyricGenerator: state.lyricGenerator

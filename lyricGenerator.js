@@ -1,6 +1,6 @@
 // initial state of this reducer
 const initialState = {
-  error: null,
+  error: undefined,
   isLoading: false,
   lyrics: null,
   nChars: 50,
@@ -26,6 +26,7 @@ const lyricGenerator = (state = initialState, action) => {
       const { nChars, sample } = action      
       return {
         ...state,
+        error: undefined,
         isLoading: true,
         nChars,
         sample
@@ -36,6 +37,7 @@ const lyricGenerator = (state = initialState, action) => {
       const { lyrics } = action
       return {
         ...state,
+        error: undefined,
         isLoading: false,
         lyrics
       }
