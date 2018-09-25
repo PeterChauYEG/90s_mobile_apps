@@ -10,7 +10,7 @@ const styles = StyleSheet.create({
   textInput: {
     height: 40,
     width: 100
-  },
+  }
 })
 
 export default styles

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1537836816267" clover="3.2.0">
+  <project timestamp="1537836816267" name="All files">
+    <metrics statements="11" coveredstatements="11" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1" elements="12" coveredelements="12" complexity="0" loc="11" ncloc="11" packages="2" files="2" classes="2">
+      <package name="lyrics_generator">
+        <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <file name="Loading.js" path="/Users/Admin/lyrics_generator/Loading.js">
+          <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+          <line num="1" count="1" type="stmt"/>
+          <line num="7" count="1" type="stmt"/>
+          <line num="10" count="1" type="stmt"/>
+          <line num="13" count="1" type="stmt"/>
+          <line num="15" count="1" type="stmt"/>
+          <line num="16" count="1" type="stmt"/>
+          <line num="19" count="1" type="stmt"/>
+        </file>
+      </package>
+      <package name="lyrics_generator.styles">
+        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <file name="Loading.js" path="/Users/Admin/lyrics_generator/styles/Loading.js">
+          <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+          <line num="1" count="1" type="stmt"/>
+          <line num="2" count="1" type="stmt"/>
+          <line num="4" count="1" type="stmt"/>
+          <line num="12" count="1" type="stmt"/>
+        </file>
+      </package>
+    </metrics>
+  </project>
+</coverage>

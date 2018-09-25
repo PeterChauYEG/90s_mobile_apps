@@ -1,10 +1,8 @@
-import React from 'react';
-import ViewComponent from '../ViewComponent';
-import renderer from 'react-test-renderer';
+import React from 'react'
+import Loading from '../Loading'
+import renderer from 'react-test-renderer'
 
 it('renders correctly', () => {
-  const tree = renderer
-    .create(<ViewComponent/>)
-    .toJSON();
-  expect(tree).toMatchSnapshot();
-});
+  const tree = renderer.create(<Loading />).toJSON()
+  expect(tree).toMatchSnapshot()
+})
