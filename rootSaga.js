@@ -1,8 +1,8 @@
-import { fork } from 'redux-saga/effects'
+import { all, fork } from 'redux-saga/effects'
 import lyricGeneratorSaga from './lyricGeneratorSaga'
 
 export default function* rootSaga () {
-  yield [
+  yield all([
     fork(lyricGeneratorSaga)
-  ]
+  ])
 }

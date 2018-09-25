@@ -7,6 +7,7 @@
 
 // react
 import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 
 // react native
 import { Text, View } from 'react-native'
@@ -15,7 +16,7 @@ import { Text, View } from 'react-native'
 import { connect } from 'react-redux'
 
 // redux actions
-import { lyricGenerationRequest } from './actions'
+import { clearLyrics, lyricGenerationRequest } from './actions'
 
 // components
 import ErrorOccurred from './ErrorOccurred'
@@ -37,8 +38,11 @@ class MainApp extends Component<Props> {
   }
 
   render () {    
-    const { lyricGenerationRequest } = this.props
-    const { error, isLoading, lyrics, nChars, sample } = this.props.lyricGenerator 
+    const { 
+      clearLyrics, 
+      lyricGenerationRequest,
+      lyricGenerator: { error, isLoading, lyrics, nChars, sample }
+    } = this.props
     
     if (isLoading) {
       return (
@@ -51,7 +55,7 @@ class MainApp extends Component<Props> {
     if (error) {
       return (
         <View style={styles.container}>
-          <ErrorOccurred />
+          <ErrorOccurred clearLyrics={clearLyrics} />
         </View>
       )
     }
@@ -61,7 +65,7 @@ class MainApp extends Component<Props> {
         <Text style={styles.title}>90s Pop Lyric Generator</Text>
 
         {lyrics ? (
-          <Lyrics lyrics={lyrics} nChars={nChars} sample={sample} />
+          <Lyrics clearLyrics={clearLyrics} lyrics={lyrics} nChars={nChars} sample={sample} />
         ) : (
           <GenerateForm lyricGenerationRequest={lyricGenerationRequest}/>
         )}
@@ -76,12 +80,29 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = dispatch => ({
   lyricGenerationRequest: (nChars, sample) =>
-    dispatch(lyricGenerationRequest(nChars, sample))
+    dispatch(lyricGenerationRequest(nChars, sample)),
+  clearLyrics: () =>
+    dispatch(clearLyrics())
 })
 
 const ReduxApp = connect(
   mapStateToProps,
   mapDispatchToProps
 )(MainApp)
+
+
+MainApp.propTypes = {
+  clearLyrics: PropTypes.func.isRequired, 
+  lyricGenerationRequest: PropTypes.func.isRequired,
+  lyricGenerator: PropTypes.shape({
+    error: PropTypes.string, 
+    isLoading: PropTypes.bool, 
+    lyrics: PropTypes.string, 
+    nChars: PropTypes.number.isRequired, 
+    sample: PropTypes.string.isRequired
+  })
+}
+
+ReduxApp.defaultProps = {}
 
 export default ReduxApp

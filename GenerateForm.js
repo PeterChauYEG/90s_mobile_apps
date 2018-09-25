@@ -6,6 +6,7 @@
 
 // react
 import React, { Component, Fragment } from 'react'
+import PropTypes from 'prop-types'
 
 // react native
 import { Button, Slider, Text, TextInput, View } from 'react-native'
@@ -65,5 +66,11 @@ class GenerateForm extends Component<Props> {
     )
   }
 }
+
+
+GenerateForm.propTypes = {
+  lyricGenerationRequest: PropTypes.func.isRequired
+}
+GenerateForm.defaultProps = {}
 
 export default GenerateForm

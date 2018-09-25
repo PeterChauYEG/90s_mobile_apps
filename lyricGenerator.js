@@ -11,6 +11,10 @@ const initialState = {
 // generation
 const lyricGenerator = (state = initialState, action) => {
   switch (action.type) {
+    // when the lyrics should be cleared
+    case 'CLEAR_LYRICS':
+      return initialState
+      
     // when there is a failure, set loading to false, and set the error
     case 'LYRIC_GENERATION_FAILURE':
       const { error } = action

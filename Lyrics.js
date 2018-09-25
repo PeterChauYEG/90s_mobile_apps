@@ -7,13 +7,13 @@
 import React, { Fragment } from 'react'
 
 // react native
-import { Text } from 'react-native'
+import { Button, Text } from 'react-native'
 
 // styles 
 import styles from './styles/Loading'
 
 const Lyrics = props => {
-  const { lyrics, nChars, sample } = props
+  const { clearLyrics, lyrics, nChars, sample } = props
 
   return (
     <Fragment>
@@ -25,6 +25,13 @@ const Lyrics = props => {
       
       <Text style={styles.body}>Generated Lyrics</Text>
       <Text style={styles.body}>{lyrics}</Text>
+      
+      <Button
+        accessibilityLabel='Start this process over and enter new parameters'
+        color='#841584'
+        onPress={() => clearLyrics(nChars, sample)}
+        title='Start over'
+      /> 
     </Fragment>
   )
 }

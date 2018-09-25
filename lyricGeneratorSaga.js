@@ -1,5 +1,9 @@
-import { call, put, select } from 'redux-saga/effects'
-import { takeLatest } from 'redux-saga'
+import { 
+  call, 
+  put, 
+  select,
+  takeLatest
+} from 'redux-saga/effects'
 
 // actions
 import { 
@@ -14,7 +18,7 @@ export function* lyricGenerationRequestSaga(action) {
   // construct data object
   const data = {
     n_chars: nChars,
-    sample
+    sample: sample.toLowerCase()
   }
     
   const result = yield call(APIRequest, data)
@@ -55,6 +59,6 @@ const APIRequest = data => {
 }
 
 export default function* lyricGeneratorSaga() {
-  yield* takeLatest('LYRIC_GENERATION_REQUEST', lyricGenerationRequestSaga)
+  yield takeLatest('LYRIC_GENERATION_REQUEST', lyricGenerationRequestSaga)
 }
 

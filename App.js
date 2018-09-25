@@ -7,6 +7,7 @@
 
 // react
 import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 
 // redux
 import { Provider } from 'react-redux'
@@ -26,7 +27,7 @@ import rootSaga from './rootSaga'
 import ReduxApp from './ReduxApp'
 
 type Props = {}
-export default class App extends Component<Props> {
+class App extends Component<Props> {
   render () {
     
     // create middleware 
@@ -53,3 +54,8 @@ export default class App extends Component<Props> {
     )
   }
 }
+
+App.propTypes = {}
+App.defaultProps = {}
+
+export default App

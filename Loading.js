@@ -16,4 +16,7 @@ const Loading = () => {
   return <Text style={styles.title}>predicting...</Text>
 }
 
+Loading.propTypes = {}
+Loading.defaultProps = {}
+
 export default Loading

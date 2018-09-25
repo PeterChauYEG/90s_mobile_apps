@@ -1,3 +1,8 @@
+// Action which fires when a the lyrics should be cleared.
+export const clearLyrics = () => ({
+  type: 'CLEAR_LYRICS'
+})
+
 // Action which fires when a request for lyric generation fails
 export const lyricGenerationFailure = error => ({
   type: 'LYRIC_GENERATION_FAILURE', error
