@@ -18,10 +18,10 @@ import { composeWithDevTools } from 'redux-devtools-extension'
 import createSagaMiddleware from 'redux-saga'
 
 // reducer
-import rootReducer from './rootReducer'
+import rootReducer from '../rootReducer'
 
 // saga 
-import rootSaga from './rootSaga'
+import rootSaga from '../rootSaga'
 
 // Container component
 import ReduxApp from './ReduxApp'
