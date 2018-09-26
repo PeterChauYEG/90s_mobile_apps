@@ -10,21 +10,21 @@ import PropTypes from 'prop-types'
 // react native
 import { Button, Text } from 'react-native'
 
-// styles 
+// styles
 import styles from './styles/ErrorOccurred'
 
 const ErrorOccurred = props => {
   const { clearLyrics } = props
-  
+
   return (
     <Fragment>
-      <Text style={styles.title}>Uh oh, an error has occurred</Text>    
+      <Text style={styles.title}>Uh oh, an error has occurred</Text>
       <Button
         accessibilityLabel='Start this process over and enter new parameters'
         color='#841584'
         onPress={clearLyrics}
         title='Start over'
-      /> 
+      />
     </Fragment>
   )
 }

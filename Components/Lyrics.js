@@ -10,7 +10,7 @@ import PropTypes from 'prop-types'
 // react native
 import { Button, Text } from 'react-native'
 
-// styles 
+// styles
 import styles from './styles/Loading'
 
 const Lyrics = props => {
@@ -20,19 +20,19 @@ const Lyrics = props => {
     <Fragment>
       <Text style={styles.body}>Initial Lyrics</Text>
       <Text style={styles.body}>{sample}</Text>
-      
+
       <Text style={styles.body}>Number of characters generated</Text>
       <Text style={styles.body}>{nChars}</Text>
-      
+
       <Text style={styles.body}>Generated Lyrics</Text>
       <Text style={styles.body}>{lyrics}</Text>
-      
+
       <Button
         accessibilityLabel='Start this process over and enter new parameters'
         color='#841584'
         onPress={() => clearLyrics(nChars, sample)}
         title='Start over'
-      /> 
+      />
     </Fragment>
   )
 }

@@ -9,7 +9,7 @@ import React from 'react'
 // react native
 import { Text } from 'react-native'
 
-// styles 
+// styles
 import styles from './styles/Loading'
 
 const Loading = () => {

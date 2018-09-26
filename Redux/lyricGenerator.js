@@ -7,14 +7,14 @@ const initialState = {
   sample: 'sweet dreams are made of '
 }
 
-// lyrics generator reducer which handles any actions related to lyric 
+// lyrics generator reducer which handles any actions related to lyric
 // generation
 const lyricGenerator = (state = initialState, action) => {
   switch (action.type) {
     // when the lyrics should be cleared
     case 'CLEAR_LYRICS':
       return initialState
-      
+
     // when there is a failure, set loading to false, and set the error
     case 'LYRIC_GENERATION_FAILURE':
       const { error } = action
@@ -23,11 +23,11 @@ const lyricGenerator = (state = initialState, action) => {
         error,
         isLoading: false
       }
-      
+
     // when there is a request, set loading to true, and set the params that
     // were passed in
     case 'LYRIC_GENERATION_REQUEST':
-      const { nChars, sample } = action      
+      const { nChars, sample } = action
       return {
         ...state,
         error: undefined,
@@ -35,7 +35,7 @@ const lyricGenerator = (state = initialState, action) => {
         nChars,
         sample
       }
-      
+
     // when there is a success, set loading to false, and set the lyrics
     case 'LYRIC_GENERATION_SUCCESS':
       const { lyrics } = action

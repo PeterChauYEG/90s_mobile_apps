@@ -1,18 +1,13 @@
-import { 
-  call, 
-  put, 
-  select,
-  takeLatest
-} from 'redux-saga/effects'
+import { call, put, select, takeLatest } from 'redux-saga/effects'
 
 // actions
-import { 
-  lyricGenerationFailure, 
+import {
+  lyricGenerationFailure,
   lyricGenerationRequest,
-  lyricGenerationSuccess 
+  lyricGenerationSuccess
 } from './actions'
 
-export function* lyricGenerationRequestSaga(action) {
+export function * lyricGenerationRequestSaga (action) {
   const { nChars, sample } = action
 
   // construct data object
@@ -20,9 +15,9 @@ export function* lyricGenerationRequestSaga(action) {
     n_chars: nChars,
     sample: sample.toLowerCase()
   }
-    
+
   const result = yield call(APIRequest, data)
-  
+
   if (result.ok) {
     yield put(lyricGenerationSuccess(result.lyrics))
   } else {
@@ -51,14 +46,15 @@ const APIRequest = data => {
       // handle failure
       const result = {
         ok: false,
-        error: new Error('There was an issue when attempting to generate lyrics.')
+        error: new Error(
+          'There was an issue when attempting to generate lyrics.'
+        )
       }
-      
+
       return result
-    })  
+    })
 }
 
-export default function* lyricGeneratorSaga() {
+export default function * lyricGeneratorSaga () {
   yield takeLatest('LYRIC_GENERATION_REQUEST', lyricGenerationRequestSaga)
 }
-

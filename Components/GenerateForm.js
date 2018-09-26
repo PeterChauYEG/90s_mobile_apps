@@ -11,7 +11,7 @@ import PropTypes from 'prop-types'
 // react native
 import { Button, Slider, Text, TextInput, View } from 'react-native'
 
-// styles 
+// styles
 import styles from './styles/GenerateForm'
 
 type Props = {}
@@ -33,10 +33,10 @@ class GenerateForm extends Component<Props> {
     this.setState({ sample: text })
   }
 
-  render () {    
+  render () {
     const { lyricGenerationRequest } = this.props
     const { nChars, sample } = this.state
-    
+
     return (
       <Fragment>
         <Text style={styles.body}>Enter some initial lyrics</Text>
@@ -61,12 +61,11 @@ class GenerateForm extends Component<Props> {
           color='#841584'
           onPress={() => lyricGenerationRequest(nChars, sample)}
           title='Generate'
-        />            
+        />
       </Fragment>
     )
   }
 }
-
 
 GenerateForm.propTypes = {
   lyricGenerationRequest: PropTypes.func.isRequired

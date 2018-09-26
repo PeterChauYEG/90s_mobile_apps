@@ -20,7 +20,7 @@ import createSagaMiddleware from 'redux-saga'
 // reducer
 import rootReducer from '../Redux/rootReducer'
 
-// saga 
+// saga
 import rootSaga from '../Redux/rootSaga'
 
 // Container component
@@ -29,24 +29,21 @@ import ReduxApp from './ReduxApp'
 type Props = {}
 class App extends Component<Props> {
   render () {
-    
-    // create middleware 
+    // create middleware
     const middleware = []
-    
+
     // create saga middleware
     const sagaMiddleware = createSagaMiddleware()
     middleware.push(sagaMiddleware)
-    
+
     // create enhancers
-    const enhancers = composeWithDevTools(
-      applyMiddleware(...middleware)
-    )
-    
+    const enhancers = composeWithDevTools(applyMiddleware(...middleware))
+
     // create the redux store
     const store = createStore(rootReducer, enhancers)
 
     sagaMiddleware.run(rootSaga)
-  
+
     return (
       <Provider store={store}>
         <ReduxApp />
