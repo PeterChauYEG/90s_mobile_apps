@@ -16,7 +16,7 @@ import { Text, View } from 'react-native'
 import { connect } from 'react-redux'
 
 // redux actions
-import { clearLyrics, lyricGenerationRequest } from '../actions'
+import { clearLyrics, lyricGenerationRequest } from '../Redux/actions'
 
 // components
 import ErrorOccurred from './ErrorOccurred'
