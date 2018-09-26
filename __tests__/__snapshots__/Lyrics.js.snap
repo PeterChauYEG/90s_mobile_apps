@@ -1,0 +1,68 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ErrorOccurred renders correctly 1`] = `
+Array [
+  <Text>
+    Initial Lyrics
+  </Text>,
+  <Text>
+    
+  </Text>,
+  <Text>
+    Number of characters generated
+  </Text>,
+  <Text>
+    0
+  </Text>,
+  <Text>
+    Generated Lyrics
+  </Text>,
+  <Text>
+    
+  </Text>,
+  <View
+    accessibilityLabel="Start this process over and enter new parameters"
+    accessibilityRole="button"
+    accessibilityStates={Array []}
+    accessible={true}
+    isTVSelectable={true}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "opacity": 1,
+      }
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {},
+        ]
+      }
+    >
+      <Text
+        style={
+          Array [
+            Object {
+              "color": "#007AFF",
+              "fontSize": 18,
+              "padding": 8,
+              "textAlign": "center",
+            },
+            Object {
+              "color": "#841584",
+            },
+          ]
+        }
+      >
+        Start over
+      </Text>
+    </View>
+  </View>,
+]
+`;

@@ -1,0 +1,111 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ErrorOccurred renders correctly 1`] = `
+Array [
+  <Text
+    style={
+      Object {
+        "color": "#333333",
+        "marginBottom": 5,
+        "textAlign": "center",
+      }
+    }
+  >
+    Enter some initial lyrics
+  </Text>,
+  <TextInput
+    allowFontScaling={true}
+    onChangeText={[Function]}
+    placeholder="sweet dreams are made of these"
+    style={
+      Object {
+        "height": 40,
+        "width": 100,
+      }
+    }
+    underlineColorAndroid="transparent"
+    value="sweet dreams are made of "
+  />,
+  <Text
+    style={
+      Object {
+        "color": "#333333",
+        "marginBottom": 5,
+        "textAlign": "center",
+      }
+    }
+  >
+    Enter of characters to generate
+  </Text>,
+  <RCTSlider
+    disabled={false}
+    enabled={true}
+    maximumValue={500}
+    minimumValue={10}
+    onChange={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    onValueChange={[Function]}
+    step={10}
+    style={
+      Array [
+        Object {
+          "height": 40,
+        },
+        Object {
+          "height": 40,
+          "width": 100,
+        },
+      ]
+    }
+    value={50}
+  />,
+  <Text>
+    50
+  </Text>,
+  <View
+    accessibilityLabel="Generate lyrics from your initial lyrics"
+    accessibilityRole="button"
+    accessibilityStates={Array []}
+    accessible={true}
+    isTVSelectable={true}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "opacity": 1,
+      }
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {},
+        ]
+      }
+    >
+      <Text
+        style={
+          Array [
+            Object {
+              "color": "#007AFF",
+              "fontSize": 18,
+              "padding": 8,
+              "textAlign": "center",
+            },
+            Object {
+              "color": "#841584",
+            },
+          ]
+        }
+      >
+        Generate
+      </Text>
+    </View>
+  </View>,
+]
+`;

@@ -7,6 +7,7 @@
     "lint": "prettier-standard **/*.js",
     "start": "node node_modules/react-native/local-cli/cli.js start",
     "test": "jest",
+    "test:watch": "jest --watch",
     "test:update": "jest -u",
     "test:coverage": "jest --coverage"
   },

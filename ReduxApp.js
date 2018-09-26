@@ -28,15 +28,7 @@ import Lyrics from './Lyrics'
 import styles from './styles/ReduxApp'
 
 type Props = {}
-class MainApp extends Component<Props> {
-  onNCharsChange = text => {
-    this.setState({ nChars: text })
-  }
-
-  onSampleChange = text => {
-    this.setState({ sample: text })
-  }
-
+export class MainApp extends Component<Props> {
   render () {    
     const { 
       clearLyrics, 
@@ -96,7 +88,7 @@ MainApp.propTypes = {
   lyricGenerationRequest: PropTypes.func.isRequired,
   lyricGenerator: PropTypes.shape({
     error: PropTypes.string, 
-    isLoading: PropTypes.bool, 
+    isLoading: PropTypes.bool.isRequired, 
     lyrics: PropTypes.string, 
     nChars: PropTypes.number.isRequired, 
     sample: PropTypes.string.isRequired

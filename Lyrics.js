@@ -5,6 +5,7 @@
 
 // react
 import React, { Fragment } from 'react'
+import PropTypes from 'prop-types'
 
 // react native
 import { Button, Text } from 'react-native'
@@ -35,5 +36,13 @@ const Lyrics = props => {
     </Fragment>
   )
 }
+
+Lyrics.propTypes = {
+  clearLyrics: PropTypes.func.isRequired,
+  lyrics: PropTypes.string.isRequired,
+  nChars: PropTypes.number.isRequired,
+  sample: PropTypes.string.isRequired
+}
+Lyrics.defaultProps = {}
 
 export default Lyrics

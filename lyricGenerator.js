@@ -2,7 +2,7 @@
 const initialState = {
   error: undefined,
   isLoading: false,
-  lyrics: null,
+  lyrics: undefined,
   nChars: 50,
   sample: 'sweet dreams are made of '
 }

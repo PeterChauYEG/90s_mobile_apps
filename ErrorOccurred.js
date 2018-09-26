@@ -22,7 +22,7 @@ const ErrorOccurred = props => {
       <Button
         accessibilityLabel='Start this process over and enter new parameters'
         color='#841584'
-        onPress={() => clearLyrics()}
+        onPress={clearLyrics}
         title='Start over'
       /> 
     </Fragment>
