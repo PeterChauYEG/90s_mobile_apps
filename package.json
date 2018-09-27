@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "react": "16.5.0",
+    "react-dom": "^16.5.2",
     "react-native": "0.57.1",
     "react-redux": "^5.0.7",
     "redux": "^4.0.0",
@@ -22,10 +23,11 @@
   "devDependencies": {
     "babel-jest": "23.6.0",
     "enzyme": "^3.6.0",
+    "enzyme-adapter-react-16": "^1.5.0",
     "jest": "^23.6.0",
     "metro-react-native-babel-preset": "^0.45.6",
     "prettier-standard": "^8.0.1",
-    "react-test-renderer": "16.5.0"
+    "react-test-renderer": "16.5.0",
   },
   "jest": {
     "preset": "react-native",
