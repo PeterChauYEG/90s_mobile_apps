@@ -21,6 +21,7 @@
   },
   "devDependencies": {
     "babel-jest": "23.6.0",
+    "enzyme": "^3.6.0",
     "jest": "^23.6.0",
     "metro-react-native-babel-preset": "^0.45.6",
     "prettier-standard": "^8.0.1",
