@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1537936530809" clover="3.2.0">
-  <project timestamp="1537936530810" name="All files">
-    <metrics statements="104" coveredstatements="98" conditionals="6" coveredconditionals="5" methods="21" coveredmethods="9" elements="131" coveredelements="112" complexity="0" loc="104" ncloc="104" packages="2" files="10" classes="10">
-      <package name="lyrics_generator">
-        <metrics statements="88" coveredstatements="82" conditionals="6" coveredconditionals="5" methods="21" coveredmethods="9"/>
-        <file name="ErrorOccurred.js" path="/Users/Admin/lyrics_generator/ErrorOccurred.js">
+<coverage generated="1538106385103" clover="3.2.0">
+  <project timestamp="1538106385103" name="All files">
+    <metrics statements="106" coveredstatements="102" conditionals="6" coveredconditionals="5" methods="21" coveredmethods="11" elements="133" coveredelements="118" complexity="0" loc="106" ncloc="106" packages="3" files="11" classes="11">
+      <package name="Components">
+        <metrics statements="79" coveredstatements="75" conditionals="6" coveredconditionals="5" methods="17" coveredmethods="11"/>
+        <file name="ErrorOccurred.js" path="/Users/Admin/lyrics_generator/Components/ErrorOccurred.js">
           <metrics statements="11" coveredstatements="11" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
           <line num="1" count="2" type="stmt"/>
           <line num="7" count="2" type="stmt"/>
@@ -12,36 +12,36 @@
           <line num="11" count="2" type="stmt"/>
           <line num="14" count="2" type="stmt"/>
           <line num="16" count="2" type="stmt"/>
-          <line num="17" count="2" type="stmt"/>
-          <line num="19" count="2" type="stmt"/>
+          <line num="17" count="3" type="stmt"/>
+          <line num="19" count="3" type="stmt"/>
           <line num="32" count="2" type="stmt"/>
           <line num="35" count="2" type="stmt"/>
           <line num="37" count="2" type="stmt"/>
         </file>
-        <file name="GenerateForm.js" path="/Users/Admin/lyrics_generator/GenerateForm.js">
-          <metrics statements="20" coveredstatements="17" conditionals="0" coveredconditionals="0" methods="6" coveredmethods="3"/>
+        <file name="GenerateForm.js" path="/Users/Admin/lyrics_generator/Components/GenerateForm.js">
+          <metrics statements="20" coveredstatements="18" conditionals="0" coveredconditionals="0" methods="6" coveredmethods="4"/>
           <line num="1" count="2" type="stmt"/>
           <line num="8" count="2" type="stmt"/>
           <line num="9" count="2" type="stmt"/>
           <line num="12" count="2" type="stmt"/>
           <line num="15" count="2" type="stmt"/>
           <line num="18" count="2" type="stmt"/>
-          <line num="19" count="3" type="stmt"/>
-          <line num="20" count="3" type="stmt"/>
+          <line num="19" count="4" type="stmt"/>
+          <line num="20" count="4" type="stmt"/>
           <line num="29" count="0" type="stmt"/>
-          <line num="30" count="3" type="stmt"/>
+          <line num="30" count="4" type="stmt"/>
           <line num="33" count="0" type="stmt"/>
-          <line num="34" count="3" type="stmt"/>
-          <line num="37" count="3" type="stmt"/>
-          <line num="38" count="3" type="stmt"/>
-          <line num="40" count="3" type="stmt"/>
-          <line num="62" count="0" type="stmt"/>
+          <line num="34" count="4" type="stmt"/>
+          <line num="37" count="4" type="stmt"/>
+          <line num="38" count="4" type="stmt"/>
+          <line num="40" count="4" type="stmt"/>
+          <line num="62" count="1" type="stmt"/>
           <line num="67" count="2" type="stmt"/>
-          <line num="71" count="2" type="stmt"/>
-          <line num="74" count="2" type="stmt"/>
-          <line num="76" count="2" type="stmt"/>
+          <line num="70" count="2" type="stmt"/>
+          <line num="73" count="2" type="stmt"/>
+          <line num="75" count="2" type="stmt"/>
         </file>
-        <file name="Loading.js" path="/Users/Admin/lyrics_generator/Loading.js">
+        <file name="Loading.js" path="/Users/Admin/lyrics_generator/Components/Loading.js">
           <metrics statements="9" coveredstatements="9" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
           <line num="1" count="2" type="stmt"/>
           <line num="7" count="2" type="stmt"/>
@@ -53,22 +53,22 @@
           <line num="20" count="2" type="stmt"/>
           <line num="22" count="2" type="stmt"/>
         </file>
-        <file name="Lyrics.js" path="/Users/Admin/lyrics_generator/Lyrics.js">
-          <metrics statements="12" coveredstatements="11" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="1"/>
+        <file name="Lyrics.js" path="/Users/Admin/lyrics_generator/Components/Lyrics.js">
+          <metrics statements="12" coveredstatements="12" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
           <line num="1" count="2" type="stmt"/>
           <line num="7" count="2" type="stmt"/>
           <line num="8" count="2" type="stmt"/>
           <line num="11" count="2" type="stmt"/>
           <line num="14" count="2" type="stmt"/>
           <line num="16" count="2" type="stmt"/>
-          <line num="17" count="1" type="stmt"/>
-          <line num="19" count="1" type="stmt"/>
-          <line num="33" count="0" type="stmt"/>
+          <line num="17" count="2" type="stmt"/>
+          <line num="19" count="2" type="stmt"/>
+          <line num="33" count="1" type="stmt"/>
           <line num="40" count="2" type="stmt"/>
           <line num="46" count="2" type="stmt"/>
           <line num="48" count="2" type="stmt"/>
         </file>
-        <file name="ReduxApp.js" path="/Users/Admin/lyrics_generator/ReduxApp.js">
+        <file name="ReduxApp.js" path="/Users/Admin/lyrics_generator/Components/ReduxApp.js">
           <metrics statements="27" coveredstatements="25" conditionals="6" coveredconditionals="5" methods="7" coveredmethods="3"/>
           <line num="1" count="1" type="stmt"/>
           <line num="9" count="1" type="stmt"/>
@@ -88,58 +88,66 @@
           <line num="47" count="3" type="cond" truecount="2" falsecount="0"/>
           <line num="48" count="1" type="stmt"/>
           <line num="55" count="2" type="stmt"/>
-          <line num="66" count="1" type="stmt"/>
-          <line num="69" count="1" type="stmt"/>
-          <line num="73" count="1" type="stmt"/>
-          <line num="74" count="0" type="stmt"/>
-          <line num="76" count="0" type="stmt"/>
-          <line num="80" count="1" type="stmt"/>
+          <line num="71" count="1" type="stmt"/>
+          <line num="74" count="1" type="stmt"/>
+          <line num="78" count="1" type="stmt"/>
+          <line num="79" count="0" type="stmt"/>
+          <line num="81" count="0" type="stmt"/>
+          <line num="84" count="1" type="stmt"/>
           <line num="86" count="1" type="stmt"/>
           <line num="98" count="1" type="stmt"/>
           <line num="100" count="1" type="stmt"/>
         </file>
-        <file name="actions.js" path="/Users/Admin/lyrics_generator/actions.js">
-          <metrics statements="9" coveredstatements="9" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="0"/>
-          <line num="1" count="1" type="stmt"/>
-          <line num="2" count="1" type="stmt"/>
-          <line num="3" count="1" type="stmt"/>
-          <line num="7" count="1" type="stmt"/>
-          <line num="8" count="1" type="stmt"/>
-          <line num="12" count="1" type="stmt"/>
-          <line num="13" count="1" type="stmt"/>
-          <line num="17" count="1" type="stmt"/>
-          <line num="18" count="1" type="stmt"/>
-        </file>
       </package>
-      <package name="lyrics_generator.styles">
+      <package name="Components.styles">
         <metrics statements="16" coveredstatements="16" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        <file name="ErrorOccurred.js" path="/Users/Admin/lyrics_generator/styles/ErrorOccurred.js">
+        <file name="ErrorOccurred.js" path="/Users/Admin/lyrics_generator/Components/styles/ErrorOccurred.js">
           <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
           <line num="1" count="2" type="stmt"/>
           <line num="2" count="2" type="stmt"/>
           <line num="4" count="2" type="stmt"/>
           <line num="12" count="2" type="stmt"/>
         </file>
-        <file name="GenerateForm.js" path="/Users/Admin/lyrics_generator/styles/GenerateForm.js">
+        <file name="GenerateForm.js" path="/Users/Admin/lyrics_generator/Components/styles/GenerateForm.js">
           <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
           <line num="1" count="2" type="stmt"/>
           <line num="2" count="2" type="stmt"/>
           <line num="4" count="2" type="stmt"/>
           <line num="16" count="2" type="stmt"/>
         </file>
-        <file name="Loading.js" path="/Users/Admin/lyrics_generator/styles/Loading.js">
+        <file name="Loading.js" path="/Users/Admin/lyrics_generator/Components/styles/Loading.js">
           <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
           <line num="1" count="3" type="stmt"/>
           <line num="2" count="3" type="stmt"/>
           <line num="4" count="3" type="stmt"/>
           <line num="12" count="3" type="stmt"/>
         </file>
-        <file name="ReduxApp.js" path="/Users/Admin/lyrics_generator/styles/ReduxApp.js">
+        <file name="ReduxApp.js" path="/Users/Admin/lyrics_generator/Components/styles/ReduxApp.js">
           <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
           <line num="1" count="1" type="stmt"/>
           <line num="2" count="1" type="stmt"/>
           <line num="4" count="1" type="stmt"/>
           <line num="18" count="1" type="stmt"/>
+        </file>
+      </package>
+      <package name="Redux">
+        <metrics statements="11" coveredstatements="11" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="0"/>
+        <file name="actionCreators.js" path="/Users/Admin/lyrics_generator/Redux/actionCreators.js">
+          <metrics statements="9" coveredstatements="9" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="0"/>
+          <line num="1" count="1" type="stmt"/>
+          <line num="4" count="1" type="stmt"/>
+          <line num="5" count="1" type="stmt"/>
+          <line num="9" count="1" type="stmt"/>
+          <line num="11" count="1" type="stmt"/>
+          <line num="15" count="1" type="stmt"/>
+          <line num="18" count="1" type="stmt"/>
+          <line num="22" count="1" type="stmt"/>
+          <line num="24" count="1" type="stmt"/>
+        </file>
+        <file name="actionTypes.js" path="/Users/Admin/lyrics_generator/Redux/actionTypes.js">
+          <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+          <line num="1" count="1" type="stmt"/>
+          <line num="8" count="1" type="stmt"/>
         </file>
       </package>
     </metrics>

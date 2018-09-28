@@ -1,10 +1,15 @@
 import React from 'react'
-import { shallow } from 'enzyme'
-import ErrorOccurred from '../ErrorOccurred'
-import renderer from 'react-test-renderer'
-import Enzyme from 'enzyme'
-import Adapter from 'enzyme-adapter-react-16';
 
+// Testing libraries
+import { shallow } from 'enzyme'
+import Adapter from 'enzyme-adapter-react-16';
+import Enzyme from 'enzyme'
+import renderer from 'react-test-renderer'
+
+// Components
+import ErrorOccurred from '../ErrorOccurred'
+
+// Configure enzyme to work with react
 Enzyme.configure({ adapter: new Adapter() })
 
 describe('ErrorOccurred', () => {
