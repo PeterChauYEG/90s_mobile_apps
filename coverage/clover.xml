@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1538143974099" clover="3.2.0">
-  <project timestamp="1538143974100" name="All files">
-    <metrics statements="106" coveredstatements="104" conditionals="6" coveredconditionals="5" methods="21" coveredmethods="13" elements="133" coveredelements="122" complexity="0" loc="106" ncloc="106" packages="3" files="11" classes="11">
+<coverage generated="1538161033427" clover="3.2.0">
+  <project timestamp="1538161033427" name="All files">
+    <metrics statements="106" coveredstatements="104" conditionals="6" coveredconditionals="5" methods="21" coveredmethods="17" elements="133" coveredelements="126" complexity="0" loc="106" ncloc="106" packages="3" files="11" classes="11">
       <package name="Components">
         <metrics statements="79" coveredstatements="77" conditionals="6" coveredconditionals="5" methods="17" coveredmethods="13"/>
         <file name="ErrorOccurred.js" path="/Users/Admin/lyrics_generator/Components/ErrorOccurred.js">
@@ -131,23 +131,23 @@
         </file>
       </package>
       <package name="Redux">
-        <metrics statements="11" coveredstatements="11" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="0"/>
+        <metrics statements="11" coveredstatements="11" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="4"/>
         <file name="actionCreators.js" path="/Users/Admin/lyrics_generator/Redux/actionCreators.js">
-          <metrics statements="9" coveredstatements="9" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="0"/>
-          <line num="1" count="1" type="stmt"/>
-          <line num="4" count="1" type="stmt"/>
-          <line num="5" count="1" type="stmt"/>
-          <line num="9" count="1" type="stmt"/>
-          <line num="11" count="1" type="stmt"/>
-          <line num="15" count="1" type="stmt"/>
-          <line num="18" count="1" type="stmt"/>
-          <line num="22" count="1" type="stmt"/>
-          <line num="24" count="1" type="stmt"/>
+          <metrics statements="9" coveredstatements="9" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="4"/>
+          <line num="1" count="2" type="stmt"/>
+          <line num="4" count="2" type="stmt"/>
+          <line num="5" count="2" type="stmt"/>
+          <line num="9" count="2" type="stmt"/>
+          <line num="11" count="2" type="stmt"/>
+          <line num="15" count="2" type="stmt"/>
+          <line num="18" count="2" type="stmt"/>
+          <line num="22" count="2" type="stmt"/>
+          <line num="24" count="2" type="stmt"/>
         </file>
         <file name="actionTypes.js" path="/Users/Admin/lyrics_generator/Redux/actionTypes.js">
           <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-          <line num="1" count="1" type="stmt"/>
-          <line num="8" count="1" type="stmt"/>
+          <line num="1" count="2" type="stmt"/>
+          <line num="8" count="2" type="stmt"/>
         </file>
       </package>
     </metrics>
