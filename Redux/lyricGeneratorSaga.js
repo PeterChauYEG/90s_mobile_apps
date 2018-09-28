@@ -7,7 +7,7 @@ import {
   lyricGenerationFailure,
   lyricGenerationRequest,
   lyricGenerationSuccess
-} from './actions'
+} from './actionCreators'
 
 export function * lyricGenerationRequestSaga (action) {
   const { nChars, sample } = action
