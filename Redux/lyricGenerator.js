@@ -1,3 +1,5 @@
+import ActionTypes from './actionTypes'
+
 // initial state of this reducer
 const initialState = {
   error: undefined,
@@ -12,11 +14,11 @@ const initialState = {
 const lyricGenerator = (state = initialState, action) => {
   switch (action.type) {
     // when the lyrics should be cleared
-    case 'CLEAR_LYRICS':
+    case ActionTypes.CLEAR_LYRICS:
       return initialState
 
     // when there is a failure, set loading to false, and set the error
-    case 'LYRIC_GENERATION_FAILURE':
+    case ActionTypes.LYRIC_GENERATION_FAILURE:
       const { error } = action
       return {
         ...state,
@@ -26,7 +28,7 @@ const lyricGenerator = (state = initialState, action) => {
 
     // when there is a request, set loading to true, and set the params that
     // were passed in
-    case 'LYRIC_GENERATION_REQUEST':
+    case ActionTypes.LYRIC_GENERATION_REQUEST:
       const { nChars, sample } = action
       return {
         ...state,
@@ -37,7 +39,7 @@ const lyricGenerator = (state = initialState, action) => {
       }
 
     // when there is a success, set loading to false, and set the lyrics
-    case 'LYRIC_GENERATION_SUCCESS':
+    case ActionTypes.LYRIC_GENERATION_SUCCESS:
       const { lyrics } = action
       return {
         ...state,

@@ -1,3 +1,5 @@
+import ActionTypes from './actionTypes'
+
 import { call, put, select, takeLatest } from 'redux-saga/effects'
 
 // actions
@@ -56,5 +58,8 @@ const APIRequest = data => {
 }
 
 export default function * lyricGeneratorSaga () {
-  yield takeLatest('LYRIC_GENERATION_REQUEST', lyricGenerationRequestSaga)
+  yield takeLatest(
+    ActionTypes.LYRIC_GENERATION_REQUEST,
+    lyricGenerationRequestSaga
+  )
 }
