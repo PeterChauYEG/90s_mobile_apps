@@ -25,8 +25,8 @@ class GenerateForm extends Component<Props> {
     }
   }
 
-  onNCharsChange = text => {
-    this.setState({ nChars: text })
+  onNCharsChange = number => {
+    this.setState({ nChars: number })
   }
 
   onSampleChange = text => {

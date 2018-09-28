@@ -31,6 +31,21 @@ describe('ErrorOccurred', () => {
     expect(lyricGenerationRequest).toHaveBeenCalled()
   })
   
-  // TODO: - write test for slider change
-  // TODO: - write test for input change
+  it('simulates input change', () => {
+    const instanceOf = renderer
+      .create(<GenerateForm lyricGenerationRequest={() => {}} />)
+      .getInstance()
+      
+    instanceOf.onSampleChange('test')
+    expect(instanceOf.state.sample).toEqual('test')
+  })
+  
+  it('simulates input change', () => {
+    const instanceOf = renderer
+      .create(<GenerateForm lyricGenerationRequest={() => {}} />)
+      .getInstance()
+      
+    instanceOf.onNCharsChange(1)
+    expect(instanceOf.state.nChars).toEqual(1)
+  })
 })

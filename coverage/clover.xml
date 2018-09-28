@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1538106385103" clover="3.2.0">
-  <project timestamp="1538106385103" name="All files">
-    <metrics statements="106" coveredstatements="102" conditionals="6" coveredconditionals="5" methods="21" coveredmethods="11" elements="133" coveredelements="118" complexity="0" loc="106" ncloc="106" packages="3" files="11" classes="11">
+<coverage generated="1538143974099" clover="3.2.0">
+  <project timestamp="1538143974100" name="All files">
+    <metrics statements="106" coveredstatements="104" conditionals="6" coveredconditionals="5" methods="21" coveredmethods="13" elements="133" coveredelements="122" complexity="0" loc="106" ncloc="106" packages="3" files="11" classes="11">
       <package name="Components">
-        <metrics statements="79" coveredstatements="75" conditionals="6" coveredconditionals="5" methods="17" coveredmethods="11"/>
+        <metrics statements="79" coveredstatements="77" conditionals="6" coveredconditionals="5" methods="17" coveredmethods="13"/>
         <file name="ErrorOccurred.js" path="/Users/Admin/lyrics_generator/Components/ErrorOccurred.js">
           <metrics statements="11" coveredstatements="11" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
           <line num="1" count="2" type="stmt"/>
@@ -19,22 +19,22 @@
           <line num="37" count="2" type="stmt"/>
         </file>
         <file name="GenerateForm.js" path="/Users/Admin/lyrics_generator/Components/GenerateForm.js">
-          <metrics statements="20" coveredstatements="18" conditionals="0" coveredconditionals="0" methods="6" coveredmethods="4"/>
+          <metrics statements="20" coveredstatements="20" conditionals="0" coveredconditionals="0" methods="6" coveredmethods="6"/>
           <line num="1" count="2" type="stmt"/>
           <line num="8" count="2" type="stmt"/>
           <line num="9" count="2" type="stmt"/>
           <line num="12" count="2" type="stmt"/>
           <line num="15" count="2" type="stmt"/>
           <line num="18" count="2" type="stmt"/>
-          <line num="19" count="4" type="stmt"/>
-          <line num="20" count="4" type="stmt"/>
-          <line num="29" count="0" type="stmt"/>
-          <line num="30" count="4" type="stmt"/>
-          <line num="33" count="0" type="stmt"/>
-          <line num="34" count="4" type="stmt"/>
-          <line num="37" count="4" type="stmt"/>
-          <line num="38" count="4" type="stmt"/>
-          <line num="40" count="4" type="stmt"/>
+          <line num="19" count="6" type="stmt"/>
+          <line num="20" count="6" type="stmt"/>
+          <line num="29" count="1" type="stmt"/>
+          <line num="30" count="6" type="stmt"/>
+          <line num="33" count="1" type="stmt"/>
+          <line num="34" count="6" type="stmt"/>
+          <line num="37" count="8" type="stmt"/>
+          <line num="38" count="8" type="stmt"/>
+          <line num="40" count="8" type="stmt"/>
           <line num="62" count="1" type="stmt"/>
           <line num="67" count="2" type="stmt"/>
           <line num="70" count="2" type="stmt"/>
