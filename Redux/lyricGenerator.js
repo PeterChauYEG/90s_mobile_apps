@@ -1,7 +1,7 @@
 import ActionTypes from './actionTypes'
 
 // initial state of this reducer
-const initialState = {
+export const initialState = {
   error: undefined,
   isLoading: false,
   lyrics: undefined,
