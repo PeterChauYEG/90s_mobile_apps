@@ -5,24 +5,13 @@ import lyricGenerator, {
 import ActionTypes from '../actionTypes'
 
 describe('lyricGenerator Reducer', () => {  
-  // it('should return the initial state', () => {
-  //   const action = {
-  //     type: 'undefined'
-  //   }
-  // 
-  //   const result = lyricGenerator(undefined, action)
-  //   const expected = initialState
-  // 
-  //   expect(result).toEqual(expected)
-  // }) 
-  // 
-  // it('should return the initial state', () => {
-  // 
-  //   const result = lyricGenerator(undefined, {})
-  //   const expected = initialState
-  // 
-  //   expect(result).toEqual(expected)
-  // }) 
+  it('should return the initial state', () => {
+  
+    const result = lyricGenerator(undefined, {})
+    const expected = initialState
+  
+    expect(result).toEqual(expected)
+  }) 
   
   it('should reduce the CLEAR_LYRICS action', () => {
     const action = {

@@ -12,7 +12,7 @@ import GenerateForm from '../GenerateForm'
 // Configure enzyme to work with react
 Enzyme.configure({ adapter: new Adapter() })
 
-describe('ErrorOccurred', () => {
+describe('GenerateForm', () => {
   it('renders correctly', () => {
     const tree = renderer
       .create(<GenerateForm lyricGenerationRequest={() => {}} />)

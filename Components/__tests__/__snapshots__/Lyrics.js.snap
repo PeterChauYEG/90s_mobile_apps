@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ErrorOccurred renders correctly 1`] = `
+exports[`Lyrics renders correctly 1`] = `
 Array [
   <Text>
     Initial Lyrics

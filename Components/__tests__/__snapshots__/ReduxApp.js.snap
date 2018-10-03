@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ErrorOccurred renders correctly 1`] = `
+exports[`ReduxApp renders correctly 1`] = `
 <View
   style={
     Object {
@@ -130,7 +130,7 @@ exports[`ErrorOccurred renders correctly 1`] = `
 </View>
 `;
 
-exports[`ErrorOccurred renders error state correctly 1`] = `
+exports[`ReduxApp renders error state correctly 1`] = `
 <View
   style={
     Object {
@@ -199,7 +199,7 @@ exports[`ErrorOccurred renders error state correctly 1`] = `
 </View>
 `;
 
-exports[`ErrorOccurred renders loading state correctly 1`] = `
+exports[`ReduxApp renders loading state correctly 1`] = `
 <View
   style={
     Object {
@@ -224,7 +224,7 @@ exports[`ErrorOccurred renders loading state correctly 1`] = `
 </View>
 `;
 
-exports[`ErrorOccurred renders results state correctly 1`] = `
+exports[`ReduxApp renders results state correctly 1`] = `
 <View
   style={
     Object {

@@ -12,7 +12,7 @@ import Lyrics from '../Lyrics'
 // Configure enzyme to work with react
 Enzyme.configure({ adapter: new Adapter() })
 
-describe('ErrorOccurred', () => {
+describe('Lyrics', () => {
   it('renders correctly', () => {
     const tree = renderer
       .create(

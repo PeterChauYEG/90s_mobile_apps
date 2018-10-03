@@ -1,8 +1,12 @@
 import React from 'react'
-import { MainApp } from '../ReduxApp'
+import { 
+  MainApp,
+  mapDispatchToProps,
+  mapStateToProps
+} from '../ReduxApp'
 import renderer from 'react-test-renderer'
 
-describe('ErrorOccurred', () => {
+describe('ReduxApp', () => {
   it('renders correctly', () => {
     const lyricGenerator = {
       error: undefined,
@@ -85,5 +89,26 @@ describe('ErrorOccurred', () => {
       )
       .toJSON()
     expect(tree).toMatchSnapshot()
+  })
+  
+  it('maps state to props', () => {
+    const state = {
+      lyricGenerator: {}
+    }
+    
+    const result = mapStateToProps(state)
+    const expected = {
+      lyricGenerator: {}
+    }
+    expect(JSON.stringify(result)).toBe(JSON.stringify(expected))
+  })
+  
+  it('maps dispatch to props', () => {    
+    const result = mapDispatchToProps()
+    const expected = {
+      lyricGenerationRequest: () => {},
+      clearLyrics: () => {},
+    }
+    expect(JSON.stringify(result)).toBe(JSON.stringify(expected))
   })
 })

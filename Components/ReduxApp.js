@@ -71,11 +71,11 @@ export class MainApp extends Component<Props> {
   }
 }
 
-const mapStateToProps = state => ({
+export const mapStateToProps = state => ({
   lyricGenerator: state.lyricGenerator
 })
 
-const mapDispatchToProps = dispatch => ({
+export const mapDispatchToProps = dispatch => ({
   lyricGenerationRequest: (nChars, sample) =>
     dispatch(lyricGenerationRequest(nChars, sample)),
   clearLyrics: () => dispatch(clearLyrics())
