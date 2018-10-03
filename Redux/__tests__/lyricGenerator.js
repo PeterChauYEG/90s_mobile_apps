@@ -16,7 +16,7 @@ describe('lyricGenerator Reducer', () => {
   //   expect(result).toEqual(expected)
   // }) 
   // 
-  // it('should return the initial state - 2', () => {
+  // it('should return the initial state', () => {
   // 
   //   const result = lyricGenerator(undefined, {})
   //   const expected = initialState

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1538452955801" clover="3.2.0">
-  <project timestamp="1538452955802" name="All files">
-    <metrics statements="158" coveredstatements="156" conditionals="31" coveredconditionals="21" methods="35" coveredmethods="27" elements="224" coveredelements="204" complexity="0" loc="158" ncloc="158" packages="3" files="16" classes="16">
+<coverage generated="1538526398520" clover="3.2.0">
+  <project timestamp="1538526398520" name="All files">
+    <metrics statements="158" coveredstatements="156" conditionals="31" coveredconditionals="29" methods="35" coveredmethods="29" elements="224" coveredelements="214" complexity="0" loc="158" ncloc="158" packages="3" files="16" classes="16">
       <package name="Components">
         <metrics statements="101" coveredstatements="99" conditionals="6" coveredconditionals="5" methods="20" coveredmethods="18"/>
         <file name="App.js" path="/Users/Admin/lyrics_generator/Components/App.js">
@@ -156,31 +156,31 @@
         </file>
       </package>
       <package name="Redux">
-        <metrics statements="41" coveredstatements="41" conditionals="25" coveredconditionals="16" methods="15" coveredmethods="9"/>
+        <metrics statements="41" coveredstatements="41" conditionals="25" coveredconditionals="24" methods="15" coveredmethods="11"/>
         <file name="actionCreators.js" path="/Users/Admin/lyrics_generator/Redux/actionCreators.js">
           <metrics statements="9" coveredstatements="9" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="4"/>
-          <line num="1" count="3" type="stmt"/>
-          <line num="4" count="3" type="stmt"/>
-          <line num="5" count="3" type="stmt"/>
-          <line num="9" count="3" type="stmt"/>
-          <line num="11" count="3" type="stmt"/>
-          <line num="15" count="3" type="stmt"/>
-          <line num="18" count="3" type="stmt"/>
-          <line num="22" count="3" type="stmt"/>
-          <line num="24" count="3" type="stmt"/>
+          <line num="1" count="4" type="stmt"/>
+          <line num="4" count="4" type="stmt"/>
+          <line num="5" count="4" type="stmt"/>
+          <line num="9" count="4" type="stmt"/>
+          <line num="11" count="4" type="stmt"/>
+          <line num="15" count="4" type="stmt"/>
+          <line num="18" count="4" type="stmt"/>
+          <line num="22" count="4" type="stmt"/>
+          <line num="24" count="4" type="stmt"/>
         </file>
         <file name="actionTypes.js" path="/Users/Admin/lyrics_generator/Redux/actionTypes.js">
           <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-          <line num="1" count="4" type="stmt"/>
-          <line num="8" count="4" type="stmt"/>
+          <line num="1" count="5" type="stmt"/>
+          <line num="8" count="5" type="stmt"/>
         </file>
         <file name="lyricGenerator.js" path="/Users/Admin/lyrics_generator/Redux/lyricGenerator.js">
           <metrics statements="14" coveredstatements="14" conditionals="11" coveredconditionals="10" methods="1" coveredmethods="1"/>
           <line num="1" count="2" type="stmt"/>
           <line num="4" count="2" type="stmt"/>
           <line num="9" count="2" type="stmt"/>
-          <line num="14" count="8" type="cond" truecount="5" falsecount="1"/>
-          <line num="15" count="8" type="cond" truecount="5" falsecount="0"/>
+          <line num="14" count="7" type="cond" truecount="5" falsecount="1"/>
+          <line num="15" count="7" type="cond" truecount="5" falsecount="0"/>
           <line num="18" count="1" type="stmt"/>
           <line num="22" count="1" type="stmt"/>
           <line num="23" count="1" type="stmt"/>
@@ -188,18 +188,18 @@
           <line num="33" count="1" type="stmt"/>
           <line num="43" count="1" type="stmt"/>
           <line num="44" count="1" type="stmt"/>
-          <line num="51" count="4" type="stmt"/>
+          <line num="51" count="3" type="stmt"/>
           <line num="55" count="2" type="stmt"/>
         </file>
         <file name="lyricGeneratorSaga.js" path="/Users/Admin/lyrics_generator/Redux/lyricGeneratorSaga.js">
-          <metrics statements="7" coveredstatements="7" conditionals="11" coveredconditionals="3" methods="8" coveredmethods="2"/>
-          <line num="1" count="1" type="stmt"/>
-          <line num="3" count="1" type="stmt"/>
-          <line num="6" count="1" type="stmt"/>
-          <line num="12" count="1" type="stmt"/>
-          <line num="60" count="2" type="cond" truecount="3" falsecount="8"/>
-          <line num="61" count="1" type="stmt"/>
-          <line num="63" count="1" type="stmt"/>
+          <metrics statements="7" coveredstatements="7" conditionals="11" coveredconditionals="11" methods="8" coveredmethods="4"/>
+          <line num="1" count="2" type="stmt"/>
+          <line num="3" count="2" type="stmt"/>
+          <line num="6" count="2" type="stmt"/>
+          <line num="12" count="2" type="stmt"/>
+          <line num="60" count="8" type="cond" truecount="11" falsecount="0"/>
+          <line num="61" count="2" type="stmt"/>
+          <line num="63" count="2" type="stmt"/>
         </file>
         <file name="rootReducer.js" path="/Users/Admin/lyrics_generator/Redux/rootReducer.js">
           <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
