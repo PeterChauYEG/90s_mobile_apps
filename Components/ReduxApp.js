@@ -18,6 +18,9 @@ import { connect } from 'react-redux'
 // redux actions
 import { clearLyrics, lyricGenerationRequest } from '../Redux/actionCreators'
 
+// types 
+import type { State } from '../Redux/lyricGenerator'
+
 // components
 import ErrorOccurred from './ErrorOccurred'
 import GenerateForm from './GenerateForm'
@@ -28,22 +31,14 @@ import Lyrics from './Lyrics'
 import styles from './styles/ReduxApp'
 
 // types 
-type LyricGeneratorState = {
-  error?: string,
-  isLoading: boolean,
-  lyrics?: string,
-  nChars: number,
-  sample: string 
-}
-
 type ReduxState = {
-  lyricGenerator: LyricGeneratorState
+  lyricGenerator: State
 }
 
 type Props = {
   clearLyrics: () => void,
   lyricGenerationRequest: (number, string) => void,
-  lyricGenerator: LyricGeneratorState
+  lyricGenerator: State
 }
 
 export class MainApp extends Component<Props> {

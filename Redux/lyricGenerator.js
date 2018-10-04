@@ -4,7 +4,20 @@
  * @flow
  */
 
+// redux
 import ActionTypes from './actionTypes'
+
+// types
+import type { Action } from './actionCreators'
+
+// types 
+export type State = {
+  error?: string,
+  isLoading: boolean,
+  lyrics?: string,
+  nChars: number,
+  sample: string 
+}
 
 // initial state of this reducer
 export const initialState = {
@@ -17,7 +30,7 @@ export const initialState = {
 
 // lyrics generator reducer which handles any actions related to lyric
 // generation
-const lyricGenerator = (state = initialState, action) => {
+const lyricGenerator = (state: State = initialState, action: Action) => {
   switch (action.type) {
     // when the lyrics should be cleared
     case ActionTypes.CLEAR_LYRICS:
