@@ -1,3 +1,9 @@
+/**
+ *
+ * @format
+ * @flow
+ */
+ 
 import ActionTypes from './actionTypes'
 
 // Action which fires when a the lyrics should be cleared.

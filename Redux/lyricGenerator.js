@@ -1,3 +1,9 @@
+/**
+ *
+ * @format
+ * @flow
+ */
+
 import ActionTypes from './actionTypes'
 
 // initial state of this reducer

@@ -1,3 +1,9 @@
+/**
+ *
+ * @format
+ * @flow
+ */
+
 // redux
 import { combineReducers } from 'redux'
 

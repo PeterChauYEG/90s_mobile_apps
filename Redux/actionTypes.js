@@ -1,3 +1,9 @@
+/**
+ *
+ * @format
+ * @flow
+ */
+
 const ActionTypes = {
   CLEAR_LYRICS: 'CLEAR_LYRICS',
   LYRIC_GENERATION_FAILURE: 'LYRIC_GENERATION_FAILURE',

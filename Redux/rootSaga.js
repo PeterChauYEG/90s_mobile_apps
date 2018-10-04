@@ -1,3 +1,9 @@
+/**
+ *
+ * @format
+ * @flow
+ */
+
 import { all, fork } from 'redux-saga/effects'
 import lyricGeneratorSaga from './lyricGeneratorSaga'
 
