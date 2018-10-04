@@ -14,22 +14,35 @@ import { Button, Slider, Text, TextInput, View } from 'react-native'
 // styles
 import styles from './styles/GenerateForm'
 
-type Props = {}
-class GenerateForm extends Component<Props> {
-  constructor (props) {
+type Props = {
+  lyricGenerationRequest: (number, string) => void
+}
+type State = {
+  nChars: number,
+  sample: string
+}
+class GenerateForm extends Component<Props, State> {
+  static propTypes = {
+    lyricGenerationRequest: PropTypes.func.isRequired
+  }
+  
+  static defaultProps = {}
+  
+  constructor (props: Props) {
     super(props)
 
     this.state = {
       nChars: 50,
       sample: 'sweet dreams are made of '
     }
+    
   }
 
-  onNCharsChange = number => {
+  onNCharsChange = (number: number) => {
     this.setState({ nChars: number })
   }
 
-  onSampleChange = text => {
+  onSampleChange = (text: string) => {
     this.setState({ sample: text })
   }
 
@@ -66,10 +79,5 @@ class GenerateForm extends Component<Props> {
     )
   }
 }
-
-GenerateForm.propTypes = {
-  lyricGenerationRequest: PropTypes.func.isRequired
-}
-GenerateForm.defaultProps = {}
 
 export default GenerateForm

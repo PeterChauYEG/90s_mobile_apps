@@ -13,7 +13,14 @@ import { Button, Text } from 'react-native'
 // styles
 import styles from './styles/Loading'
 
-const Lyrics = props => {
+type Props = {
+  clearLyrics: () => void,
+  lyrics: string,
+  nChars: number,
+  sample: string
+}
+
+const Lyrics = (props: Props) => {
   const { clearLyrics, lyrics, nChars, sample } = props
 
   return (
@@ -30,7 +37,7 @@ const Lyrics = props => {
       <Button
         accessibilityLabel='Start this process over and enter new parameters'
         color='#841584'
-        onPress={() => clearLyrics(nChars, sample)}
+        onPress={() => clearLyrics()}
         title='Start over'
       />
     </Fragment>

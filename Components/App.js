@@ -28,6 +28,9 @@ import ReduxApp from './ReduxApp'
 
 type Props = {}
 class App extends Component<Props> {
+  static defaultProps = {}
+  static propTypes = {}  
+  
   render () {
     // create middleware
     const middleware = []
@@ -51,8 +54,5 @@ class App extends Component<Props> {
     )
   }
 }
-
-App.propTypes = {}
-App.defaultProps = {}
 
 export default App

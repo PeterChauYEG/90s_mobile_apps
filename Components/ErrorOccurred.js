@@ -13,7 +13,10 @@ import { Button, Text } from 'react-native'
 // styles
 import styles from './styles/ErrorOccurred'
 
-const ErrorOccurred = props => {
+type Props = {
+  clearLyrics: () => void
+}
+const ErrorOccurred = (props: Props) => {
   const { clearLyrics } = props
 
   return (

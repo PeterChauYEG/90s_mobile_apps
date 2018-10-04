@@ -3,6 +3,8 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
+    "flow": "flow status",
+    "flow:stop": "flow stop",
     "ios:start": "react-native run-ios",
     "lint": "prettier-standard **/*.js",
     "start": "node node_modules/react-native/local-cli/cli.js start",
@@ -25,6 +27,7 @@
     "babel-jest": "23.6.0",
     "enzyme": "^3.6.0",
     "enzyme-adapter-react-16": "^1.5.0",
+    "flow-bin": "^0.82.0",
     "jest": "^23.6.0",
     "metro-react-native-babel-preset": "^0.45.6",
     "prettier-standard": "^8.0.1",

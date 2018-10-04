@@ -27,8 +27,40 @@ import Lyrics from './Lyrics'
 // styles
 import styles from './styles/ReduxApp'
 
-type Props = {}
+// types 
+type LyricGeneratorState = {
+  error?: string,
+  isLoading: boolean,
+  lyrics?: string,
+  nChars: number,
+  sample: string 
+}
+
+type ReduxState = {
+  lyricGenerator: LyricGeneratorState
+}
+
+type Props = {
+  clearLyrics: () => void,
+  lyricGenerationRequest: (number, string) => void,
+  lyricGenerator: LyricGeneratorState
+}
+
 export class MainApp extends Component<Props> {
+  static propTypes = {
+    clearLyrics: PropTypes.func.isRequired,
+    lyricGenerationRequest: PropTypes.func.isRequired,
+    lyricGenerator: PropTypes.shape({
+      error: PropTypes.string,
+      isLoading: PropTypes.bool.isRequired,
+      lyrics: PropTypes.string,
+      nChars: PropTypes.number.isRequired,
+      sample: PropTypes.string.isRequired
+    })
+  }
+
+  static defaultProps = {}
+  
   render () {
     const {
       clearLyrics,
@@ -71,30 +103,16 @@ export class MainApp extends Component<Props> {
   }
 }
 
-export const mapStateToProps = state => ({
+export const mapStateToProps = (state: ReduxState)  => ({
   lyricGenerator: state.lyricGenerator
 })
 
-export const mapDispatchToProps = dispatch => ({
-  lyricGenerationRequest: (nChars, sample) =>
-    dispatch(lyricGenerationRequest(nChars, sample)),
+export const mapDispatchToProps = (dispatch: *) => ({
+  lyricGenerationRequest: (nChars: number, sample: string) =>
+    dispatch(lyricGenerationRequest(nChars: number, sample: string)),
   clearLyrics: () => dispatch(clearLyrics())
 })
 
 const ReduxApp = connect(mapStateToProps, mapDispatchToProps)(MainApp)
-
-MainApp.propTypes = {
-  clearLyrics: PropTypes.func.isRequired,
-  lyricGenerationRequest: PropTypes.func.isRequired,
-  lyricGenerator: PropTypes.shape({
-    error: PropTypes.string,
-    isLoading: PropTypes.bool.isRequired,
-    lyrics: PropTypes.string,
-    nChars: PropTypes.number.isRequired,
-    sample: PropTypes.string.isRequired
-  })
-}
-
-ReduxApp.defaultProps = {}
 
 export default ReduxApp
