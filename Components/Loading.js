@@ -12,7 +12,7 @@ import { Text } from 'react-native'
 // styles
 import styles from './styles/Loading'
 
-const Loading = (_: void) => {
+const Loading = () => {
   return <Text style={styles.title}>predicting...</Text>
 }
 

@@ -109,7 +109,7 @@ export const mapStateToProps = (state: ReduxState)  => ({
 
 export const mapDispatchToProps = (dispatch: *) => ({
   lyricGenerationRequest: (nChars: number, sample: string) =>
-    dispatch(lyricGenerationRequest(nChars: number, sample: string)),
+    dispatch(lyricGenerationRequest(nChars, sample)),
   clearLyrics: () => dispatch(clearLyrics())
 })
 
