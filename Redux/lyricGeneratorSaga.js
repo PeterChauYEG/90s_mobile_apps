@@ -4,9 +4,11 @@
  * @flow
  */
 
-import ActionTypes from './actionTypes'
-
 import { call, put, select, takeLatest } from 'redux-saga/effects'
+import type { Saga } from 'redux-saga'
+
+// redux
+import ActionTypes from './actionTypes'
 
 // actions
 import {
@@ -15,7 +17,13 @@ import {
   lyricGenerationSuccess
 } from './actionCreators'
 
-export function * lyricGenerationRequestSaga (action) {
+// type 
+type Action = {
+  nChars: number,
+  sample: string
+}
+
+export function * lyricGenerationRequestSaga (action: Action): Saga<void> {
   const { nChars, sample } = action
 
   // construct data object
@@ -63,7 +71,7 @@ const APIRequest = data => {
     })
 }
 
-export default function * lyricGeneratorSaga () {
+export default function * lyricGeneratorSaga (): Saga<void> {
   yield takeLatest(
     ActionTypes.LYRIC_GENERATION_REQUEST,
     lyricGenerationRequestSaga
