@@ -328,6 +328,13 @@
 			remoteGlobalIDString = 84BF130C216942AD00B6E463;
 			remoteInfo = Watch;
 		};
+		84DCA2AB21696B6D000817A9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 146833FF1AC3E56700842450 /* React.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 83CBBA2D1A601D0E00E9B192;
+			remoteInfo = React;
+		};
 		ADBDB9261DFEBF0700ED6528 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = ADBDB91F1DFEBF0600ED6528 /* RCTBlob.xcodeproj */;
@@ -725,6 +732,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				84DCA2AC21696B6D000817A9 /* PBXTargetDependency */,
 				84BF1326216942B000B6E463 /* PBXTargetDependency */,
 			);
 			name = lyrics_generator;
@@ -1341,6 +1349,11 @@
 			isa = PBXTargetDependency;
 			target = 84BF130C216942AD00B6E463 /* Watch */;
 			targetProxy = 84BF1325216942B000B6E463 /* PBXContainerItemProxy */;
+		};
+		84DCA2AC21696B6D000817A9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = React;
+			targetProxy = 84DCA2AB21696B6D000817A9 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 

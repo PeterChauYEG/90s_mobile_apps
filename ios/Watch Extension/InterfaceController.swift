@@ -12,6 +12,9 @@ import Foundation
 
 class InterfaceController: WKInterfaceController {
 
-  @IBOutlet weak var predictionLabel: WKInterfaceLabel!
-  
+    @IBOutlet weak var generatedLabel: WKInterfaceLabel!
+    @IBAction func generateButtonTapped() {
+        print("test");
+    }
+    
 }
