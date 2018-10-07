@@ -13,15 +13,19 @@ import WatchConnectivity
 class InterfaceController: WKInterfaceController, WCSessionDelegate {
     var sample: String = "sweet dreams are made of these";
   
+    @IBOutlet weak var sampleLabel: WKInterfaceLabel!
     @IBOutlet weak var generatedLabel: WKInterfaceLabel!
+  
     @IBAction func inputSampleButtonTapped() {
+      // handle when the input button is tapped by opening the input view
       self.presentTextInputController(withSuggestions: ["What is love?"], allowedInputMode: WKTextInputMode.plain, completion: {(results) -> Void in
           self.sample = results?[0] as! String
+          self.sampleLabel.setText(self.sample)
         })
     }
   
     @IBAction func generateButtonTapped() {
-      // handle when the generate button is tapped but sending a message to the phone
+      // handle when the generate button is tapped by sending a message to the phone
       self.session?.sendMessage(["action": "generate", "sample": self.sample], replyHandler: { (dict) in
         print("action recieved")
       }, errorHandler: nil)

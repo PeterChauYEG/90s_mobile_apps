@@ -22,6 +22,7 @@
                                         <action selector="inputSampleButtonTapped" destination="AgC-eL-Hgc" id="Z5a-Zt-o4x"/>
                                     </connections>
                                 </button>
+                                <label alignment="left" text="sample" id="s3I-2K-Buw"/>
                                 <button width="1" alignment="left" title="Generate" id="UQG-bA-dCR">
                                     <color key="backgroundColor" red="0.98039215690000003" green="0.066666666669999999" blue="0.30980392159999998" alpha="1" colorSpace="calibratedRGB"/>
                                     <connections>
@@ -34,6 +35,7 @@
                     </items>
                     <connections>
                         <outlet property="generatedLabel" destination="pry-h9-iCc" id="rgA-7p-U5l"/>
+                        <outlet property="sampleLabel" destination="s3I-2K-Buw" id="iog-uX-hMM"/>
                     </connections>
                 </controller>
             </objects>
