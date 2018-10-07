@@ -49,7 +49,7 @@ export function * lyricGenerationRequestSaga (action: Action): Saga<void> {
 }
 
 const APIRequest = data => {
-  return fetch('http://localhost:5000/api/model', {
+  return fetch('http://169.254.41.177:5000/api/model', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json; charset=utf-8'
