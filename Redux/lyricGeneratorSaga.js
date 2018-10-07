@@ -4,8 +4,12 @@
  * @flow
  */
 
+// redux
 import { call, put, select, takeLatest } from 'redux-saga/effects'
 import type { Saga } from 'redux-saga'
+
+// watch
+import * as watch from 'react-native-watch-connectivity'
 
 // redux
 import ActionTypes from './actionTypes'
@@ -36,6 +40,9 @@ export function * lyricGenerationRequestSaga (action: Action): Saga<void> {
 
   if (result.ok) {
     yield put(lyricGenerationSuccess(result.lyrics))
+    watch.sendMessage({ lyrics: result.lyrics }, (err, replyMessage) => {
+      console.log("message from watch", replyMessage)
+    })
   } else {
     yield put(lyricGenerationFailure('There was an issue generating lyrics'))
   }

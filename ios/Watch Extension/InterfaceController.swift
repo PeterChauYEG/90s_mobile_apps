@@ -13,7 +13,9 @@ import WatchConnectivity
 class InterfaceController: WKInterfaceController, WCSessionDelegate {
     @IBOutlet weak var generatedLabel: WKInterfaceLabel!
     @IBAction func generateButtonTapped() {
-        print("test");
+      self.session?.sendMessage(["action": "generate"], replyHandler: { (dict) in
+        print("received")
+      }, errorHandler: nil)
     }
   
   var session: WCSession?
@@ -29,7 +31,8 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
   }
   
   func session(_ session: WCSession, didReceiveMessage message: [String : Any], replyHandler: @escaping ([String : Any]) -> Void) {
-    print("watch received message", message);
+    let lyrics = message["lyrics"] as! String
+    self.generatedLabel.setText(lyrics)
   }
   
   func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {

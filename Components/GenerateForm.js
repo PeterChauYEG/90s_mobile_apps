@@ -11,6 +11,9 @@ import PropTypes from 'prop-types'
 // react native
 import { Button, Slider, Text, TextInput, View } from 'react-native'
 
+// watch
+import * as watch from 'react-native-watch-connectivity'
+
 // styles
 import styles from './styles/GenerateForm'
 
@@ -50,6 +53,20 @@ class GenerateForm extends Component<Props, State> {
     const { lyricGenerationRequest } = this.props
     const { nChars, sample } = this.state
 
+    watch.subscribeToMessages((err, message, reply) => {
+      if (err) {
+        console.log(err)
+        return
+      }
+    
+      reply({text: "message received!"})
+      
+      if (message.action === "generate") {
+        lyricGenerationRequest(nChars, sample)
+      }
+        
+    })
+    
     return (
       <Fragment>
         <Text style={styles.body}>Enter some initial lyrics</Text>

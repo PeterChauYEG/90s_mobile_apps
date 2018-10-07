@@ -18,9 +18,6 @@ import { connect } from 'react-redux'
 // redux actions
 import { clearLyrics, lyricGenerationRequest } from '../Redux/actionCreators'
 
-// watch
-import * as watch from 'react-native-watch-connectivity'
-
 // types 
 import type { State } from '../Redux/lyricGenerator'
 
@@ -81,16 +78,6 @@ export class MainApp extends Component<Props> {
         </View>
       )
     }
-
-    watch.getUserInfo().then(info => {
-      console.log(info)
-    }).catch(err => {
-      console.log(err)
-    })
-
-    watch.sendMessage({text: "hi!"}, (err, replyMessage) => {
-      console.log("message from watch", replyMessage)
-    })
     
     return (
       <View style={styles.container}>
