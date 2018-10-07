@@ -16,6 +16,12 @@
                         <group width="1" alignment="left" layout="vertical" id="Xjq-aT-7mD">
                             <items>
                                 <label alignment="left" text="Lyric Generator" id="xci-i0-Fub"/>
+                                <button width="1" alignment="left" title="Input Sample" id="Y9A-3T-gqJ">
+                                    <color key="backgroundColor" red="0.98039215690000003" green="0.066666666669999999" blue="0.30980392159999998" alpha="1" colorSpace="calibratedRGB"/>
+                                    <connections>
+                                        <action selector="inputSampleButtonTapped" destination="AgC-eL-Hgc" id="Z5a-Zt-o4x"/>
+                                    </connections>
+                                </button>
                                 <button width="1" alignment="left" title="Generate" id="UQG-bA-dCR">
                                     <color key="backgroundColor" red="0.98039215690000003" green="0.066666666669999999" blue="0.30980392159999998" alpha="1" colorSpace="calibratedRGB"/>
                                     <connections>

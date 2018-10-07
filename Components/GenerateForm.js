@@ -53,6 +53,8 @@ class GenerateForm extends Component<Props, State> {
     const { lyricGenerationRequest } = this.props
     const { nChars, sample } = this.state
 
+    // creates a subscription for messages from the watch 
+    // then makes a generate request
     watch.subscribeToMessages((err, message, reply) => {
       if (err) {
         console.log(err)
@@ -60,9 +62,9 @@ class GenerateForm extends Component<Props, State> {
       }
     
       reply({text: "message received!"})
-      
       if (message.action === "generate") {
-        lyricGenerationRequest(nChars, sample)
+        this.setState({ sample: message.sample })
+        lyricGenerationRequest(nChars, message.sample)
       }
         
     })
