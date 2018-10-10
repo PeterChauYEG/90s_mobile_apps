@@ -38,9 +38,9 @@
 		2DF0FFEE2056DD460020B375 /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DAD3EA31DF850E9000B6D8A /* libReact.a */; };
 		58DA83EB880947EDBAB2612B /* libRNWatch.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BA6B50B12488462B9656EBD4 /* libRNWatch.a */; };
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
+		8440E74C216D9DE900DF9EA9 /* Watch Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 84BF1319216942AF00B6E463 /* Watch Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		84BF1311216942AD00B6E463 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84BF130F216942AD00B6E463 /* Interface.storyboard */; };
 		84BF1313216942AF00B6E463 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84BF1312216942AF00B6E463 /* Assets.xcassets */; };
-		84BF131A216942AF00B6E463 /* Watch Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 84BF1319216942AF00B6E463 /* Watch Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		84BF131F216942AF00B6E463 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BF131E216942AF00B6E463 /* InterfaceController.swift */; };
 		84BF1321216942AF00B6E463 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BF1320216942AF00B6E463 /* ExtensionDelegate.swift */; };
 		84BF1323216942B000B6E463 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84BF1322216942B000B6E463 /* Assets.xcassets */; };
@@ -315,7 +315,7 @@
 			remoteGlobalIDString = 58B5119B1A9E6C1200147676;
 			remoteInfo = RCTText;
 		};
-		84BF131B216942AF00B6E463 /* PBXContainerItemProxy */ = {
+		8440E74D216D9DE900DF9EA9 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 83CBB9F71A601CBA00E9B192 /* Project object */;
 			proxyType = 1;
@@ -353,13 +353,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		84BF1352216942B000B6E463 /* Embed App Extensions */ = {
+		8440E74F216D9DE900DF9EA9 /* Embed App Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				84BF131A216942AF00B6E463 /* Watch Extension.appex in Embed App Extensions */,
+				8440E74C216D9DE900DF9EA9 /* Watch Extension.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -810,12 +810,12 @@
 			buildConfigurationList = 84BF1353216942B000B6E463 /* Build configuration list for PBXNativeTarget "Watch" */;
 			buildPhases = (
 				84BF130B216942AD00B6E463 /* Resources */,
-				84BF1352216942B000B6E463 /* Embed App Extensions */,
+				8440E74F216D9DE900DF9EA9 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				84BF131C216942AF00B6E463 /* PBXTargetDependency */,
+				8440E74E216D9DE900DF9EA9 /* PBXTargetDependency */,
 			);
 			name = Watch;
 			productName = Watch;
@@ -855,7 +855,7 @@
 						TestTargetID = 13B07F861A680F5B00A75B9A;
 					};
 					13B07F861A680F5B00A75B9A = {
-						DevelopmentTeam = BURNV5F3VC;
+						DevelopmentTeam = HCL7JR6HR3;
 					};
 					2D02E47A1E0B4A5D006451C7 = {
 						CreatedOnToolsVersion = 8.2.1;
@@ -868,12 +868,12 @@
 					};
 					84BF130C216942AD00B6E463 = {
 						CreatedOnToolsVersion = 10.0;
-						DevelopmentTeam = BURNV5F3VC;
+						DevelopmentTeam = HCL7JR6HR3;
 						ProvisioningStyle = Automatic;
 					};
 					84BF1318216942AF00B6E463 = {
 						CreatedOnToolsVersion = 10.0;
-						DevelopmentTeam = BURNV5F3VC;
+						DevelopmentTeam = HCL7JR6HR3;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -1380,10 +1380,10 @@
 			target = 2D02E47A1E0B4A5D006451C7 /* lyrics_generator-tvOS */;
 			targetProxy = 2D02E4911E0B4A5D006451C7 /* PBXContainerItemProxy */;
 		};
-		84BF131C216942AF00B6E463 /* PBXTargetDependency */ = {
+		8440E74E216D9DE900DF9EA9 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 84BF1318216942AF00B6E463 /* Watch Extension */;
-			targetProxy = 84BF131B216942AF00B6E463 /* PBXContainerItemProxy */;
+			targetProxy = 8440E74D216D9DE900DF9EA9 /* PBXContainerItemProxy */;
 		};
 		84BF1326216942B000B6E463 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -1481,7 +1481,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = NO;
-				DEVELOPMENT_TEAM = BURNV5F3VC;
+				DEVELOPMENT_TEAM = HCL7JR6HR3;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-watch-connectivity",
@@ -1493,7 +1493,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "tech.labone.lyrics-generator";
+				PRODUCT_BUNDLE_IDENTIFIER = tech.labone.lyricsCreator;
 				PRODUCT_NAME = lyrics_generator;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
@@ -1504,7 +1504,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = BURNV5F3VC;
+				DEVELOPMENT_TEAM = HCL7JR6HR3;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-watch-connectivity",
@@ -1516,7 +1516,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "tech.labone.lyrics-generator";
+				PRODUCT_BUNDLE_IDENTIFIER = tech.labone.lyricsCreator;
 				PRODUCT_NAME = lyrics_generator;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
@@ -1770,7 +1770,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEVELOPMENT_TEAM = BURNV5F3VC;
+				DEVELOPMENT_TEAM = HCL7JR6HR3;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				IBSC_MODULE = Watch_Extension;
 				INFOPLIST_FILE = Watch/Info.plist;
@@ -1780,7 +1780,7 @@
 				);
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = "tech.labone.lyrics-generator.watchkitapp";
+				PRODUCT_BUNDLE_IDENTIFIER = tech.labone.lyricsCreator.watchkit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = watchos;
@@ -1808,7 +1808,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEVELOPMENT_TEAM = BURNV5F3VC;
+				DEVELOPMENT_TEAM = HCL7JR6HR3;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				IBSC_MODULE = Watch_Extension;
 				INFOPLIST_FILE = Watch/Info.plist;
@@ -1817,7 +1817,7 @@
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = "tech.labone.lyrics-generator.watchkitapp";
+				PRODUCT_BUNDLE_IDENTIFIER = tech.labone.lyricsCreator.watchkit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = watchos;
@@ -1839,15 +1839,16 @@
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEVELOPMENT_TEAM = BURNV5F3VC;
+				DEVELOPMENT_TEAM = HCL7JR6HR3;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				INFOPLIST_FILE = "Watch Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = "tech.labone.lyrics-generator.watchkitapp.watchkitextension";
+				PRODUCT_BUNDLE_IDENTIFIER = tech.labone.lyricsCreator.watchkit.extension;
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -1869,15 +1870,16 @@
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEVELOPMENT_TEAM = BURNV5F3VC;
+				DEVELOPMENT_TEAM = HCL7JR6HR3;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				INFOPLIST_FILE = "Watch Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = "tech.labone.lyrics-generator.watchkitapp.watchkitextension";
+				PRODUCT_BUNDLE_IDENTIFIER = tech.labone.lyricsCreator.watchkit.extension;
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
